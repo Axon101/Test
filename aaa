@@ -1,0 +1,13 @@
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 6.0.0
+dotnet tool install --global dotnet-ef
+
+- Update Database
+dotnet restore
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+- Run Application
+dotnet build
+dotnet run
